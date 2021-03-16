@@ -1,0 +1,79 @@
+.tooltipContainer {
+  display: grid;
+  grid-template-columns: 145px 165px 20px;
+  grid-template-rows: auto;
+  grid-gap: 5px;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.list{
+  list-style-type: none;
+  padding: 0;
+}
+
+.summaryContainer {
+  grid-column: 1 / span 3;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  padding-right: 9px;
+}
+
+
+.titleContainer {
+  grid-column: 1 / span 3;
+  display:flex;
+  align-items: top;
+  justify-content: center;
+  padding-right: 9px;
+}
+
+.right,
+.left {
+  display: flex;
+  align-items: top;
+  justify-content: left;
+  padding-left: 15px;
+}
+
+
+.title {
+  width: 320px;
+  border-bottom: 1.2px solid white;
+  text-align: center;
+  line-height: 23px;
+  margin-top: 2px;
+  font-weight: bolder;
+}
+
+.summary {
+  width: 320px;
+  text-align: center;
+  text-justify: inter-cluster;
+  padding-top: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: auto;
+  border-top: 1.2px solid white;
+}
+
+.tippy-box[data-theme~='blueGradient'] {
+    color: white;
+
+    background: #212427; 
+  }
+  .tippy-box[data-theme~='tomato'][data-placement^='right'] > .tippy-arrow::before {
+    background: #212427;
+  }
+  .infosvg {
+    width: 20px;
+  }
+  
+  .tooltippy {
+    position: relative;
+    top: 150px;
+    left: 300px;
+}

@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    
+    "name": "Company Information Tooltip",
+    "description": "Highlight company names on websites to see it's stock performance and general information",
+    "version": "1.0.2",
+
+
+    "background": {
+        "page": "/src/background.html",
+        "persistent": false
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "css": ["/css/tooltipTheme.css"],
+            "js": ["/js/jquery-3.5.1-min.js","/js/popper.js","/js/tippy.js","/js/app.js"]
+        }
+    ],
+
+    "permissions": [
+        "https://finance.yahoo.com/*",
+        "activeTab",
+        "<all_urls>"
+    ],
+    
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://www.googleapis.com; object-src 'self'"
+}
